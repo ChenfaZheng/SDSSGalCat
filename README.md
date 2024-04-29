@@ -7,18 +7,29 @@ Galaxy10 SDSS galaxies classification with Deep Learning; A toy project for prac
 |----------|-----------|----------|---------|-------|
 | CNN      | 55.1%     | 52.6%    | 51.1%   | 32 (*17428) |
 | CNN + preprocessing     | 51.8%    | 52.7%   | 50.8% | 64 (*31435) (/8) |
-| ResNET18 + FC | 83.9%    | 79.0%   | 80.2% | 16 (*31435) (/8) |
+| ResNET18 | 83.9%    | 79.0%   | 80.2% | 16 (*31435) (/8) |
+| ResNET50 | 90.8%    | 90.9%   | 90.8% | 64 (*31435) (/8) |
 
-### ResNET18 + FullConnect
+### ResNET18
 
 16 training epoch, 31435 images per epoch (including 4 rotation * 2 flip per images in Galaxy10)
 
-The dataset was balanced to at most 2000 images per class.
+The dataset was balanced to at most 4000 images per class.
 
 A full connect layer (1000->10) was tailed to match the 10 class.
 
 ![ResNET18 Confusion Matrix](figure/resnet18_confmat.png)
 ![ResNET18 ROC Curve](figure/resnet18_roc.png)
+
+### ResNet50
+
+64 training epoch.
+
+full conntect layer tailed.
+
+![ResNET50 Confusion Matrix](figure/resnet50_confmat.png)
+![ResNET50 ROC Curve](figure/resnet50_roc.png)
+
 
 ### CNN
 
